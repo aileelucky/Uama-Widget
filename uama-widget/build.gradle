@@ -1,42 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
-ext {
-
-    bintrayRepo = 'maven'
-
-    bintrayName = 'uama-normal'
-
-
-
-    publishedGroupId = 'com.uama.widget'
-
-    libraryName = 'Uama Widget'
-
-    artifact = 'uama-normal'
-
-
-
-    libraryDescription = 'A wrapper for Uama Native Common View on Android'
-
-    libraryVersion = '1.0.0'
-
-
-
-    developerId = 'uama'
-
-    developerName = 'ailee'
-
-    developerEmail = 'why.name@outlook.com'
-
-
-
-    licenseName = 'The Apache Software License, Version 2.0'
-
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-
-    allLicenses = ["Apache-2.0"]
-
-}
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
@@ -60,9 +24,16 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:24.1.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+}
+
+publish {
+    userOrg = 'gu'//bintray.com用户名
+    groupId = 'com.uama.widget'//jcenter上的路径
+    artifactId = 'uama-normal'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    website = 'https://github.com/aileelucky/Uama-Widget'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

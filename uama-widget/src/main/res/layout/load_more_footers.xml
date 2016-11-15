@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <uama.hangzhou.gu.widget.ProgressWheel
+        android:id="@+id/load_more_progressBar"
+        android:visibility="gone"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerInParent="true"
+        wheel:matProg_barColor="#3191fd"
+        wheel:matProg_progressIndeterminate="true"
+        wheel:matProg_barWidth="2dp"/>
+
+
+    <TextView
+        android:id="@+id/no_more_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/load_more_progressBar"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="没有更多了..."
+        android:textColor="@color/font_color_gray"
+        android:textSize="15sp" />
+</RelativeLayout>
