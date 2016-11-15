@@ -1,0 +1,27 @@
+<uama.hangzhou.gu.widget.SquareRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/photo_wall_item_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/empty_photo" />
+
+    <CheckBox
+        android:id="@+id/photo_wall_item_cb"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/selector_checkbox"
+        android:button="@null"
+        android:clickable="false" />
+
+</uama.hangzhou.gu.widget.SquareRelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ 杭州绿漫科技有限公司
+  ~ Copyright (c) 16-6-25 下午4:01.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/gap_little"
+    android:paddingLeft="@dimen/gap_long_long"
+    android:paddingRight="@dimen/gap_long_long">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_btn_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pop_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/public_group_height"
+            android:gravity="center"
+            android:textColor="@color/font_main"
+            android:textSize="@dimen/font_title_size"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/popup_window_bottom_divider3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/pop_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/public_group_height"
+            android:gravity="center"
+            android:textColor="@color/font_main"
+            android:textSize="@dimen/font_title_size"
+            android:visibility="gone"
+            />
+
+        <View
+            android:id="@+id/popup_window_bottom_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/pop_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/public_group_height"
+            android:gravity="center"
+            android:textColor="@color/font_main"
+            android:textSize="@dimen/font_title_size"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/popup_window_bottom_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/pop_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/public_group_height"
+            android:gravity="center"
+            android:textColor="@color/font_main"
+            android:textSize="@dimen/font_title_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pop_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_group_height"
+        android:layout_marginTop="@dimen/gap_pag_side"
+        android:background="@drawable/white_btn_bg"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/font_main"
+        android:textSize="@dimen/font_title_size" />
+</LinearLayout>

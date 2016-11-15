@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--间距-->
+    <dimen name="gap_little">8dp</dimen>
+    <dimen name="gap_long">15dp</dimen>
+    <dimen name="gap_long_long">25dp</dimen>
+    <dimen name="gap_function_page_side">15dp</dimen>
+    <dimen name="gap_pag_side">10dp</dimen><!--首页及一些偏重于阅读的页面 距离屏幕两边距离-->
+    <dimen name="gap_lineSpacingExtra">3dp</dimen>
+
+    <dimen name="public_group_height">44dp</dimen>
+    <dimen name="font_title_size">16sp</dimen>
+</resources>

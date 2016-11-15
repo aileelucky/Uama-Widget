@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 杭州绿漫科技有限公司
+  ~ Copyright (c) 16-6-25 下午4:10.
+  -->
+
+<!-- 上下滑入式 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <translate
+        android:duration="200"
+        android:fromYDelta="0"
+        android:toYDelta="50%p" />
+
+</set>

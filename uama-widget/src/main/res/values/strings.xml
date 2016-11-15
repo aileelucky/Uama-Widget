@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Uama Widget</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="take_camera">拍照</string>
+    <string name="choose_photo">相册</string>
+    <string name="confirm">确定</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
 </resources>
