@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Uama.iml" filepath="$PROJECT_DIR$/Uama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uama-widget/uama-widget.iml" filepath="$PROJECT_DIR$/uama-widget/uama-widget.iml" />
+    </modules>
+  </component>
+</project>
