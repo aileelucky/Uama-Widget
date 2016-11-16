@@ -65,13 +65,6 @@ public class Utility {
         return fileName.endsWith(".jpg") || fileName.endsWith(".jpeg") || fileName.endsWith(".png");
     }
 
-    /**
-     * 读取照片exif信息中的旋转角度
-     *
-     * @param path
-     *            照片路径
-     * @return角度
-     */
     public static int readPictureDegree(String path) {
         if (TextUtils.isEmpty(path)) {
             return 0;
