@@ -1,6 +1,7 @@
 package uama.hangzhou.gu.widget.photo;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.MediaStore;
@@ -124,7 +125,9 @@ public class FourPicturesChoose{
     public void goToTakePhoto() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         mNewImageFilePath = CacheFileUtils.getUpLoadPhotosPath();
-        Uri uri = Uri.fromFile(new File(mNewImageFilePath));
+        ContentValues contentValues = new ContentValues(1);
+        contentValues.put(MediaStore.Images.Media.DATA, new File(mNewImageFilePath).getAbsolutePath());
+        Uri uri = activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
         intent.putExtra(MediaStore.Images.ImageColumns.ORIENTATION, 0);
         activity.startActivityForResult(intent, Constants.TAKE_PHOTO);

@@ -6,7 +6,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        minSdkVersion 17
+        minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -32,7 +32,7 @@ publish {
     userOrg = 'gu'//bintray.com用户名
     groupId = 'com.uama.widget'//jcenter上的路径
     artifactId = 'uama-normal'//项目名称
-    publishVersion = '1.1.0'//版本号
-    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    publishVersion = '1.1.2'//版本号
+    desc = '拍照适配android N'//描述，不重要
     website = 'https://github.com/aileelucky/Uama-Widget'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
