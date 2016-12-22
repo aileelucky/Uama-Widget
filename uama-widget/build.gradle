@@ -25,14 +25,13 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:recyclerview-v7:24.1.1'
     compile 'com.facebook.fresco:fresco:0.11.0'
-    compile files('libs/ZoomImageView.jar')
 }
 
 publish {
-    userOrg = 'gu'//bintray.com用户名
+    userOrg = 'gu'//bintray.com组织名
     groupId = 'com.uama.widget'//jcenter上的路径
     artifactId = 'uama-normal'//项目名称
-    publishVersion = '1.1.2'//版本号
-    desc = '拍照适配android N'//描述，不重要
+    publishVersion = '1.1.6'//版本号
+    desc = '新的图片压缩机制'//描述，不重要
     website = 'https://github.com/aileelucky/Uama-Widget'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

@@ -16,7 +16,7 @@ import uama.hangzhou.gu.constant.Constants;
 import uama.hangzhou.gu.photochoose.PhotoWallActivity;
 import uama.hangzhou.gu.util.CacheFileUtils;
 import uama.hangzhou.gu.util.FileUtil;
-import uama.hangzhou.gu.util.ImageUtils;
+import uama.hangzhou.gu.util.ImageFactory;
 import uama.hangzhou.gu.widget.MessageDialog;
 
 /**
@@ -26,14 +26,14 @@ import uama.hangzhou.gu.widget.MessageDialog;
  * 4 张占位图的选择器
  */
 
-public class FourPicturesChoose{
-    private ImageView imageView1,imageView2,imageView3,imageView4;
+public class FourPicturesChoose {
+    private ImageView imageView1, imageView2, imageView3, imageView4;
     private ImageView imgViewList[] = new ImageView[4];
     private Activity activity;
     public ArrayList<String> imageList;
     public String mNewImageFilePath;
 
-    public FourPicturesChoose(Activity activity, ImageView imageView1, ImageView imageView2, ImageView imageView3, ImageView imageView4){
+    public FourPicturesChoose(Activity activity, ImageView imageView1, ImageView imageView2, ImageView imageView3, ImageView imageView4) {
         this.activity = activity;
         this.imageView1 = imageView1;
         this.imageView2 = imageView2;
@@ -42,7 +42,7 @@ public class FourPicturesChoose{
         init();
     }
 
-    private void init(){
+    private void init() {
         imageList = new ArrayList<>();
         imgViewList[0] = imageView1;
         imgViewList[1] = imageView2;
@@ -97,12 +97,7 @@ public class FourPicturesChoose{
                         goToChooseImage();
                         break;
                     case 2:
-//                        ((BaseActivity)activity).checkCameraPermission(new PermissionCallBackListener() {
-//                            @Override
-//                            public void success() {
-                                goToTakePhoto();
-//                            }
-//                        });
+                        goToTakePhoto();
                         break;
                 }
             }
@@ -117,7 +112,7 @@ public class FourPicturesChoose{
         imgViewList[2].setImageResource(R.mipmap.camera_default_ext);
         imgViewList[3].setImageResource(R.mipmap.camera_default_ext);
         for (int i = 0; i < imageList.size(); i++) {
-            imgViewList[i].setImageBitmap(ImageUtils.getImage(imageList.get(i)));
+            imgViewList[i].setImageBitmap(ImageFactory.getImage(imageList.get(i)));
         }
     }
 
@@ -127,7 +122,7 @@ public class FourPicturesChoose{
         mNewImageFilePath = CacheFileUtils.getUpLoadPhotosPath();
         ContentValues contentValues = new ContentValues(1);
         contentValues.put(MediaStore.Images.Media.DATA, new File(mNewImageFilePath).getAbsolutePath());
-        Uri uri = activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,contentValues);
+        Uri uri = activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
         intent.putExtra(MediaStore.Images.ImageColumns.ORIENTATION, 0);
         activity.startActivityForResult(intent, Constants.TAKE_PHOTO);
@@ -141,7 +136,7 @@ public class FourPicturesChoose{
         activity.startActivityForResult(intent, Constants.SELECT_IMAGE);
     }
 
-    public void setImageList(int requestCode, int resultCode, Intent data){
+    public void setImageList(int requestCode, int resultCode, Intent data) {
         if (requestCode == Constants.TAKE_PHOTO) {
             if (resultCode == Activity.RESULT_OK) {
                 File imageFile = new File(mNewImageFilePath);
@@ -163,7 +158,7 @@ public class FourPicturesChoose{
     }
 
     //获取选中的图片list
-    public ArrayList<String> getChosenImageList(){
+    public ArrayList<String> getChosenImageList() {
         return imageList;
     }
 }

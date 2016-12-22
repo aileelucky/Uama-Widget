@@ -18,10 +18,12 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.widget.TextView;
 
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import java.util.List;
 
 import gu.hangzhou.uama.widget.R;
-import gu.uama.zoomdrawview.ImageViewPager;
+import uama.hangzhou.gu.zoom.ImageViewPager;
 
 /**
  * 图片查看器
@@ -39,6 +41,7 @@ public class ImagePagerActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fresco.initialize(ImagePagerActivity.this);
         setContentView(R.layout.showimage_detail_pager);
 
         pagerPosition = 0;

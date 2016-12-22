@@ -34,10 +34,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import gu.hangzhou.uama.widget.R;
-import gu.uama.zoomdrawview.OnPhotoTapListener;
-import gu.uama.zoomdrawview.OnViewTapListener;
-import gu.uama.zoomdrawview.ZoomDrawView;
 import uama.hangzhou.gu.util.UniversalDeviceUtils;
+import uama.hangzhou.gu.zoom.OnPhotoTapListener;
+import uama.hangzhou.gu.zoom.OnViewTapListener;
+import uama.hangzhou.gu.zoom.ZoomDrawView;
 
 
 /**
